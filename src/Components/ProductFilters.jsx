@@ -1,6 +1,6 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon, FilterIcon } from "@heroicons/react/solid";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,7 +13,13 @@ export default function ProductFilters({
   setSortOptions,
   setProducts,
 }) {
-  function filterCondition() {}
+  let numActiveFilter = [...filterOptions.color, ...filterOptions.price].reduce(
+    (acc, curr) => {
+      return curr.checked ? (acc += 1) : acc;
+    },
+    0
+  );
+
   return (
     <Disclosure
       as="section"
@@ -31,7 +37,7 @@ export default function ProductFilters({
                 className="flex-none w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-500"
                 aria-hidden="true"
               />
-              0 Filters
+              {numActiveFilter} Filters
             </Disclosure.Button>
           </div>
           <div className="pl-6">
