@@ -14,11 +14,16 @@ export default function NavBar({ setOpen, numOfItems }) {
                   <div className="hidden lg:flex-1 lg:flex lg:items-center">
                     <a href="#">
                       <span className="sr-only">Workflow</span>
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=black&shade=600"
-                        alt=""
-                      />
+                      <div className="flex justify-start items-center p-2">
+                        <img
+                          className="h-8 w-auto"
+                          src="https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=300"
+                          alt=""
+                        />
+                        <h3 className="pl-4 text-xl font-bold text-red-300   text-center ">
+                          E-Commerce
+                        </h3>
+                      </div>
                     </a>
                   </div>
 
