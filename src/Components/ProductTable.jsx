@@ -92,12 +92,12 @@ export default function ProductTable({ cart, updateCart, open, setOpen }) {
         <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.length > 0 &&
             products.map((product) => (
-              <a key={product.id} className="group">
-                <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+              <a key={product.id} className="group overflow-hidden ">
+                <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg xl:aspect-w-7 xl:aspect-h-8 transition-transform overflow-hidden">
                   <img
                     src={product.imageSrc}
                     alt={product.imageAlt}
-                    className="w-full h-full object-center object-cover"
+                    className="w-full h-full object-center object-cover scale transition-all duration-500 group-hover:scale-110 "
                   />
                   <button
                     type="button"
