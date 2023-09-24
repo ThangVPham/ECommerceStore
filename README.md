@@ -1,7 +1,7 @@
 <h3>To Start The App:</h3>
-<p>npm install</p>
-<p>npm run dev:frontend</p>
-<p>npm run dev:backend</p>
+<p>-npm install</p>
+<p>-npm run dev:frontend</p>
+<p>-npm run dev:backend</p>
 
 
 ![1](https://github.com/ThangVPham/ECommerceStore/assets/78657808/a67a6213-8014-4cd9-a056-4b58ce4e1356)
